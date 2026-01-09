@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+
+.gallery img:hover {
+    border-color: #333;
+}
+
+.preview {
+    margin-top: 20px;
+}
+
+.preview img {
+    width: 300px;
+    display: none;
+}
+
+.preview img:target {
+    display: block;
+}
+
+.slideshow {
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #333;
+}
+
+.slides {
+    display: flex;
+    width: 900px;
+    animation: slide 9s infinite;
+}
+
+.slides img {
+    width: 300px;
+    height: 200px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-300px); }
+    66% { transform: translateX(-600px); }
+    100% { transform: translateX(0); }
+}
